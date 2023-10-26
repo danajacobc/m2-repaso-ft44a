@@ -1,4 +1,4 @@
-import { SET_USER } from "./action-types"
+import { ADD_FAVORITE, DELETE_FAVORITE, SET_USER } from "./action-types"
 
 const initialState = {
     favorites: [], // array donde guardo mis episodios fav [{1}, {2}]
@@ -11,6 +11,21 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 user: action.payload,
+            }
+        }
+
+        case ADD_FAVORITE: {
+            return {
+                ...state,
+                favorites: [...state.favorites, action.payload]
+            }
+        }
+
+        case DELETE_FAVORITE: {
+            const filterFav = state.favorites.filter((fav) => fav.id !== action.payload);
+            return {
+                ...state,
+                favorites: filterFav,
             }
         }
 

@@ -1,5 +1,5 @@
 import * as actionTypes from "./action-types"; //guarda en una nueva variable "actionTypes" un obj con todo lo que se traiga.
-//REDUCER: solo funciones puras, siempre va a salir bien! - por ende no axios -
+//! REDUCER: solo funciones puras, siempre va a salir bien! - por ende no axios -
 
 export const setUser = (data) => {
     return {
