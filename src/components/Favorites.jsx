@@ -7,7 +7,7 @@ export default function Favorites(props) {
 
   const favorites = useSelector(state => state.favorites);
   const dispatch = useDispatch();
-
+//ACA NOS QUEDAMOS :)
   return (
     <div>
       <h2>Favorites</h2>
@@ -19,7 +19,7 @@ export default function Favorites(props) {
             <h3>Name: {fav.name}</h3>
             </Link>
             <h4>Rating: {fav.rating}</h4>
-            <button>
+            <button onClick={asdasd}>
               {
                 fav.completed 
                 ? (

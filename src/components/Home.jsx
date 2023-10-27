@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 import Card from "./Card";
 
@@ -9,8 +9,9 @@ const [episodes, setEpisodes] = React.useState([]); //guardo los episodios en el
 React.useEffect(() => {
   axios(`https://rickandmortyapi.com/api/episode`) //me devuelve un obj con la prop data:respuesta
    .then(response => setEpisodes(response.data)) //estoy guardando un obj{info:..., results:[{1},{2}...]}
-   .catch(error => console.log(error))
+   .catch(error => console.log(error)) //cuando tarda la api
 }, [])
+
 
   return (
     <div>
